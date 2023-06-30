@@ -1,6 +1,5 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { LinhaBody, ColunaNomeBody, ColunaEmailBody, ColunaTelBody, ColunaBody, BotaoEditar, BotaoRemover } from "./styles"
-import { RootReducer } from "../../store"
 import { remover } from "../../store/reducers/contatos"
 import ContatoClass from '../../models/Contato'
 type Props = ContatoClass   
@@ -12,12 +11,9 @@ const Contato = ({
     telefone,
     id
 }: Props) => {
-    const { itens } = useSelector((state: RootReducer) => state.contatos)
     const dispatch = useDispatch()
     
     
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars, prefer-const
-    let contatosDaLista = itens
     return ( 
         <>
         <LinhaBody>
@@ -36,17 +32,3 @@ const Contato = ({
 }
 
 export default Contato
-
-// alteraNome()
-//                     alert('Deseja alterar "nome"?')
-//                     let resposta1 = prompt('S/N')
-//                     if (resposta1 === 'S') {
-//                         let novoNome  = prompt('Digite o novo nome')
-//                         let nomeParaAlterar = contatosDaLista.find((n) => n === e.target.value)
-//                         nomeParaAlterar = novoNome
-//                         alert(nomeParaAlterar)
-//                     } else if (resposta1 === 'N') {
-//                         alert('b')
-//                     }
-
-/*dispatch(editar(contatosDaLista))}*/
