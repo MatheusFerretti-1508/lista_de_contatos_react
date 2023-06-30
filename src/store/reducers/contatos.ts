@@ -5,6 +5,13 @@ type ContatoState = {
     itens: Contato[]
 }
 
+type Props = {
+    nome: string,
+    email: string, 
+    telefone: string,
+    id: number
+}
+
 const initialState: ContatoState = {
     itens: [
         {
@@ -32,10 +39,10 @@ const contatoSlice = createSlice({
         // editar: (state, action: PayloadAction<Contato>) => {
             
         // },
-        cadastrar: (state, action: PayloadAction<Omit<Contato, 'id'>>) => {
-            const nomeNovoContato = prompt('Digite o nome do contato:')
-            const emailNovoContato = prompt('Digite o email do contato:')
-            const telefoneNovoContato = prompt('Digite o telefone do contato:')
+        cadastrar: (state) => {
+            const nomeNovoContato: string = prompt('Digite o nome do contato:')
+            const emailNovoContato: string = prompt('Digite o email do contato:')
+            const telefoneNovoContato: string = prompt('Digite o telefone do contato:')
 
             const novoContato: Props = {
                 nome: nomeNovoContato,

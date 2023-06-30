@@ -1,4 +1,3 @@
-import React from 'react';
 import ResetGlobal, { Container as ContainerDaPagina } from './styles';
 import {Provider} from 'react-redux';
 import store from './store';

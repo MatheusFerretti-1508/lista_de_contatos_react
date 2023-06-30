@@ -1,14 +1,12 @@
-import { LinhaHeader, TabelaDeContatos, TabelaBody, TabelaHeader, ColunaNomeHeader, LinhaBody, ColunaNomeBody, ColunaBody, ColunaEmailHeader, ColunaTelHeader, ColunaEmailBody, ColunaTelBody, BotaoEditar, BotaoRemover} from "./styles"
-import {remover} from '../../store/reducers/contatos'
+import { LinhaHeader, TabelaDeContatos, TabelaBody, TabelaHeader, ColunaNomeHeader, ColunaEmailHeader, ColunaTelHeader } from "./styles"
 import { RootReducer } from "../../store"
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 import Contato from "../Contato"
 
 const Tabela = () => {
     const { itens } = useSelector((state: RootReducer) => state.contatos)
-    const dispatch = useDispatch()
 
-    let contatosDaLista = itens
+    const contatosDaLista = itens
 
     return (
         <TabelaDeContatos>

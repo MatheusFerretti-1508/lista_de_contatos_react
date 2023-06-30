@@ -8,7 +8,7 @@ const AdicionarContato = () => {
 
     return (
         <>
-        <BotaoAdicionar onClick={(e) => dispatch(cadastrar()) }>Adicionar Contato</BotaoAdicionar>
+        <BotaoAdicionar onClick={() => dispatch(cadastrar()) }>Adicionar Contato</BotaoAdicionar>
         </>
     )
 }

@@ -1,10 +1,8 @@
 import { useDispatch, useSelector } from "react-redux"
 import { LinhaBody, ColunaNomeBody, ColunaEmailBody, ColunaTelBody, ColunaBody, BotaoEditar, BotaoRemover } from "./styles"
 import { RootReducer } from "../../store"
-import { remover, editar, cadastrar } from "../../store/reducers/contatos"
+import { remover } from "../../store/reducers/contatos"
 import ContatoClass from '../../models/Contato'
-import { useState } from "react"
-
 type Props = ContatoClass   
 
 
