@@ -40,9 +40,9 @@ const contatoSlice = createSlice({
             
         // },
         cadastrar: (state) => {
-            const nomeNovoContato: string = prompt('Digite o nome do contato:')
-            const emailNovoContato: string = prompt('Digite o email do contato:')
-            const telefoneNovoContato: string = prompt('Digite o telefone do contato:')
+            const nomeNovoContato: any = prompt('Digite o nome do contato:')
+            const emailNovoContato: any = prompt('Digite o email do contato:')
+            const telefoneNovoContato: any = prompt('Digite o telefone do contato:')
 
             const novoContato: Props = {
                 nome: nomeNovoContato,
