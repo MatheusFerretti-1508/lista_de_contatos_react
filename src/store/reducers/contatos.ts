@@ -11,13 +11,13 @@ const initialState: ContatoState = {
     itens: [
         {
             nome: 'Juliana',
-            email: 'julianaNamoradaDoMatheus@gmail.com',
+            email: 'juliana.domf@gmail.com',
             telefone: '+55 47 9774-7034',
             id: 1
         },
         {
             nome: 'Matheus',
-            email: 'matheusNamoradoDaJuliana@gmail.com',
+            email: 'matheus.ownr.ofj@gmail.com',
             telefone: '+55 47 9172-3301',
             id: 2
         }
