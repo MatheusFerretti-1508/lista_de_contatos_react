@@ -1,7 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import Contato from '../../models/Contato'
-import { RootReducer } from '..'
-import { useSelector } from 'react-redux'
 
 type ContatoState = {
     itens: Contato[]
@@ -31,9 +29,9 @@ const contatoSlice = createSlice({
         remover: (state, action: PayloadAction<number>) => {
             state.itens = state.itens.filter((contato) => contato.id !== action.payload)
         },
-        editar: (state, action: PayloadAction<Contato>) => {
+        // editar: (state, action: PayloadAction<Contato>) => {
             
-        },
+        // },
         cadastrar: (state, action: PayloadAction<Omit<Contato, 'id'>>) => {
             const nomeNovoContato = prompt('Digite o nome do contato:')
             const emailNovoContato = prompt('Digite o email do contato:')
@@ -51,6 +49,6 @@ const contatoSlice = createSlice({
     }
 )
 
-export const { remover, cadastrar, editar } = contatoSlice.actions
+export const { remover, cadastrar, /*editar*/ } = contatoSlice.actions
 
 export default contatoSlice.reducer
